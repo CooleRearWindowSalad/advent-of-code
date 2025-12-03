@@ -1,8 +1,10 @@
-# Advent of Code 2025 - Solutions (Python)
+# Advent of Code 2025 - Solutions
 
-A small collection of my Advent of Code 2025 puzzle solutions, written in Python. Each day's solution is a small, self-contained script that reads its puzzle input from a corresponding `.txt` file (kept out of version control).
+This repository contains my **Advent of Code 2025** solutions, written in Python.  
+Each day's puzzle has its own solution script and uses a separate input file (kept out of version control for privacy).
 
-Website: https://adventofcode.com/
+## Website
+All puzzles come from [Advent of Code](https://adventofcode.com/).
 
 ---
 
