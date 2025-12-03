@@ -1,14 +1,23 @@
 from pathlib import Path
 
 def run(p):
-    z = x = 50
-    for i in Path(p).read_text().split():
-        x = (x - int(i[1:])) % 100 if i[0] == "L" else (x + int(i[1:])) % 100
-        z += x == 0
-    return z
+    x = 50
+    part1 = part2 = 0
+    for inst in Path(p).read_text().split():
+        d, v = inst[0], int(inst[1:])
+        if d == "L":
+            f = x or 100
+            if v >= f: part2 += 1 + (v - f)//100
+            x = (x - v) % 100
+        else:
+            f = (100 - x) % 100 or 100
+            if v >= f: part2 += 1 + (v - f)//100
+            x = (x + v) % 100
+        part1 += x == 0
+    return part1, part2
 
 if __name__ == "__main__":
     folder = Path(__file__).parent
-    txt_files = sorted(folder.rglob("*.txt"))
-    input_file = txt_files[0]
-    print("Day 1 answer:", run(input_file))
+    p1, p2 = run(sorted(folder.rglob("*.txt"))[0])
+    print("Day 1 Part 1 answer:", p1)
+    print("Day 1 Part 2 answer:", p2)
