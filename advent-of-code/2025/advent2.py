@@ -17,8 +17,6 @@ def run(p):
 
 if __name__ == "__main__":
     folder = Path(__file__).parent
-    txt_files = sorted(folder.rglob("*.txt"))
-    input_file = txt_files[1]
-    a, b = run(input_file)
+    a, b = run(sorted(folder.rglob("*.txt"))[1])
     print("Day 2 answer:", a)
     print("Part 2:", b)

@@ -19,4 +19,3 @@ if __name__ == "__main__":
     p1, p2 = run(sorted(folder.rglob("*.txt"))[2])
     print("Part 1:", p1)
     print("Part 2:", p2)
-
