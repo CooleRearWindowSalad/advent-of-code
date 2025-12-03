@@ -1,0 +1,12 @@
+# Ignore input text files used for puzzle inputs
+inputs/*.txt
+*.txt
+
+# Byte-compiled / cache
+__pycache__/
+*.pyc
+
+# IDE/editor
+.vscode/
+.idea/
+
