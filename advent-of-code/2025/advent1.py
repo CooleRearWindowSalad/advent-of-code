@@ -8,6 +8,7 @@ def run(p):
     return z
 
 if __name__ == "__main__":
-    folder = Path(__file__).parent / "inputs"  # folder containing gitignored input files
-    input_file = next(folder.glob("*.txt"))
-    print(run(input_file))
+    folder = Path(__file__).parent
+    txt_files = sorted(folder.rglob("*.txt"))
+    input_file = txt_files[0]
+    print("Day 1 answer:", run(input_file))
